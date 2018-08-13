@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="ecc7cbfd-0a20-417c-ac95-6c559d25daf5" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="ITSK.SSS.Forum.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="ITSK.SSS.Forum, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b263ebd0055928d8" Namespace="ITSK.SSS.Forum.WebParts.MainPage" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\ITSK.SSS.Forum.WebParts\MainPage\MainPageUserControl.ascx" />
+    <TemplateFile Location="Layouts\ITSK.SSS.Forum\Scripts\forum-main-page.js" />
+    <TemplateFile Location="Layouts\ITSK.SSS.Forum\Scripts\forum-single-page.js" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="ITSK.SSS.Forum_Lists\Feature.xml" />
+    <FeatureManifest Location="ITSK.SSS.Forum_WebParts\Feature.xml" />
+  </FeatureManifests>
+</Solution>

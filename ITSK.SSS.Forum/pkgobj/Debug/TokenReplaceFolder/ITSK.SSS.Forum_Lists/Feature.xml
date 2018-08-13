@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="Списки форума" Id="bc97f6be-72b4-4dda-9c4a-4eefcf9e2fe0" Scope="Web" Title="[ 0000 - 0000 ]ITSK.SSS.Forum Feature1">
+  <ElementManifests>
+    <ElementManifest Location="ForumTopic\Elements.xml" />
+    <ElementFile Location="ForumTopic\Schema.xml" />
+    <ElementManifest Location="ForumTopicInstance\Elements.xml" />
+    <ElementManifest Location="ForumMessage\Elements.xml" />
+    <ElementFile Location="ForumMessage\Schema.xml" />
+    <ElementManifest Location="ForumMessageInstance\Elements.xml" />
+    <ElementManifest Location="ForumSection\Elements.xml" />
+    <ElementFile Location="ForumSection\Schema.xml" />
+    <ElementManifest Location="ForumSectionInstance\Elements.xml" />
+  </ElementManifests>
+</Feature>

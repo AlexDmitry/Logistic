@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B9A660F3-7FD6-41A1-B745-50F7F4CF8D87}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ITSK.SSS.Forum</RootNamespace>
+    <AssemblyName>ITSK.SSS.Forum</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint">
+      <HintPath>..\DLL\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime">
+      <HintPath>..\DLL\Microsoft.SharePoint.Client.ServerRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\SSSAssemblyInfo.cs">
+      <Link>SSSAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebParts\MainPage\MainPage.cs" />
+    <Compile Include="WebParts\MainPage\MainPageUserControl.ascx.cs">
+      <DependentUpon>MainPageUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebParts\MainPage\MainPageUserControl.ascx.designer.cs">
+      <DependentUpon>MainPageUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Features\WebParts\WebParts.feature">
+      <FeatureId>{35f32436-0def-47fb-82b0-5df06cd10964}</FeatureId>
+    </None>
+    <None Include="Features\Lists\Lists.feature">
+      <FeatureId>{c9df4df9-b303-48d4-9743-4d8d3fe136ef}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{141dadeb-f921-4e41-aebe-bedecff70c5a}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ForumMessage\ForumMessageInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5fec74d2-f0a4-4b13-8ba4-81892af23bfd}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ForumMessage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{84e7097a-bd38-4c40-8411-9c76936383c1}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ForumSection\ForumSectionInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fef14e21-5ce0-427d-91f4-581f67c14c30}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ForumSection\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d5f333f5-bd37-4efb-a83a-ccc4ed437df6}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ForumTopic\ForumTopicInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dba14dc4-bb81-4ee6-a946-3ae1cd33c9fa}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ForumTopic\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{02d2f133-7965-4eea-a8ed-80287ba01f07}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{ecc7cbfd-0a20-417c-ac95-6c559d25daf5}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebParts\MainPage\MainPage.webpart" />
+    <None Include="WebParts\MainPage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1b1b7b66-cc9a-4b77-a5cc-9bdc7b39e712}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Features\WebParts\WebParts.Template.xml">
+      <DependentUpon>WebParts.feature</DependentUpon>
+    </Content>
+    <Content Include="Features\Lists\Lists.Template.xml">
+      <DependentUpon>Lists.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\ITSK.SSS.Forum\Scripts\forum-main-page.js" />
+    <Content Include="Layouts\ITSK.SSS.Forum\Scripts\forum-single-page.js" />
+    <Content Include="Lists\ForumMessage\Elements.xml" />
+    <Content Include="Lists\ForumMessage\ForumMessageInstance\Elements.xml" />
+    <Content Include="Lists\ForumMessage\Schema.xml" />
+    <Content Include="Lists\ForumSection\Elements.xml" />
+    <Content Include="Lists\ForumSection\ForumSectionInstance\Elements.xml" />
+    <Content Include="Lists\ForumSection\Schema.xml" />
+    <Content Include="Lists\ForumTopic\Elements.xml" />
+    <Content Include="Lists\ForumTopic\ForumTopicInstance\Elements.xml" />
+    <Content Include="Lists\ForumTopic\Schema.xml" />
+    <Content Include="WebParts\MainPage\Elements.xml" />
+    <Content Include="WebParts\MainPage\MainPageUserControl.ascx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Форум Сообщения" OnQuickLaunch="TRUE" TemplateType="9100" Url="Lists/ForumMessage" Description="Все сообщения форума"></ListInstance>
+</Elements>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="ForumSection" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/ForumSection" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+
+
+
+
+
+      <ContentType ID="0x0100da00eac3ee94466ebbe8818c17003b97" Name="ListFieldsContentType">
+        <FieldRefs>
+
+
+
+          <FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" />
+          <FieldRef ID="{87b64bbd-67b9-494f-b32a-9bda4f985247}" Name="DisplayOrder" />
+          <FieldRef ID="{20839669-c0fa-470b-a7cd-d1e64484b7ed}" Name="Type" />
+          <FieldRef ID="{3a59f63a-7486-4993-a526-ef99373f3ebb}" Name="LikeUsersID" />
+          <FieldRef ID="{9e8068ef-1483-4ab4-abcb-4bce56e287c0}" Name="VisitUsersID" />
+          <FieldRef ID="{d5b29050-eac4-45ae-ab0d-6432e41d6762}" Name="Visit" />
+          <FieldRef ID="{6625c0b7-ced3-4954-b7fe-161dd0d42528}" Name="Like" />
+        </FieldRefs>
+      </ContentType>
+      <ContentTypeRef ID="0x01">
+        <Folder TargetName="Item" />
+      </ContentTypeRef>
+      <ContentTypeRef ID="0x0120" />
+    </ContentTypes>
+    <Fields>
+
+
+
+
+      <Field ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Type="Text" Name="Title" DisplayName="$Resources:core,Title;" Required="TRUE" SourceID="http://schemas.microsoft.com/sharepoint/v3" StaticName="Title" MaxLength="255" />
+      <Field Name="DisplayOrder" ID="{87b64bbd-67b9-494f-b32a-9bda4f985247}" DisplayName="Порядок отображения" Type="Number" />
+      <Field Name="Type" ID="{20839669-c0fa-470b-a7cd-d1e64484b7ed}" DisplayName="Тип" Type="Choice">
+        <CHOICES>
+
+
+          <CHOICE>Активный</CHOICE>
+          <CHOICE>Архивный</CHOICE>
+        </CHOICES>
+      </Field>
+      <Field Name="LikeUsersID" ID="{3a59f63a-7486-4993-a526-ef99373f3ebb}" DisplayName="LikeUsersID" Type="Note" />
+      <Field Name="VisitUsersID" ID="{9e8068ef-1483-4ab4-abcb-4bce56e287c0}" DisplayName="VisitUsersID" Type="Text" />
+      <Field Name="Visit" ID="{d5b29050-eac4-45ae-ab0d-6432e41d6762}" DisplayName="Visit" Type="Number" />
+      <Field Name="Like" ID="{6625c0b7-ced3-4954-b7fe-161dd0d42528}" DisplayName="Like" Type="Number" />
+    </Fields>
+    <Views>
+
+
+
+
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+
+
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+
+
+            <FieldRef Name="Modified" Ascending="FALSE"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/15/images/generic.png?rev=23" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <JSLink>clienttemplates.js</JSLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+
+
+
+
+          <FieldRef Name="LinkTitle"></FieldRef>
+          <FieldRef Name="DisplayOrder" />
+          <FieldRef Name="Type" />
+          <FieldRef Name="LikeUsersID" />
+          <FieldRef Name="VisitUsersID" />
+          <FieldRef Name="Visit" />
+          <FieldRef Name="Like" />
+        </ViewFields>
+        <Query>
+          <OrderBy>
+
+
+            <FieldRef Name="ID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

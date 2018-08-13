@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="Веб части форума" Id="ab800af1-5cbb-4aa3-94eb-ef209709b454" Scope="Site" Title="[ 0000 - 0000 ]ITSK.SSS.Forum Feature2">
+  <ElementManifests>
+    <ElementManifest Location="MainPage\Elements.xml" />
+    <ElementFile Location="MainPage\MainPage.webpart" />
+  </ElementManifests>
+</Feature>
