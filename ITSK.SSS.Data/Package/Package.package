@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="bbd76ec8-11f7-4161-aedf-bf3fba7f1666" solutionId="bbd76ec8-11f7-4161-aedf-bf3fba7f1666" resetWebServer="false" sharePointProductVersion="15.0" name="ITSK.SSS.Data" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="ITSK.SSS.SQL.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\ITSK.SSS.SQL\ITSK.SSS.SQL.csproj" />
+    <projectOutputAssembly location="ITSK.SSS.Base.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\ITSK.SSS.Base\ITSK.SSS.Base.csproj" />
+  </assemblies>
+</package>

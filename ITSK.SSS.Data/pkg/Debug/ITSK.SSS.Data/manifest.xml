@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="bbd76ec8-11f7-4161-aedf-bf3fba7f1666" SharePointProductVersion="15.0">
+  <CodeAccessSecurity>
+    <PolicyItem>
+      <PermissionSet class="NamedPermissionSet" version="1" Description="Permission set for ITSK.SSS.Data.">
+        <IPermission class="System.Security.Permissions.SecurityPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Flags="ControlEvidence, ControlPolicy" />
+        <IPermission class="System.Web.AspNetHostingPermission, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Level="Minimal" />
+        <IPermission class="AspNetHostingPermission" version="1" Level="Minimal" />
+        <IPermission class="SecurityPermission" version="1" Flags="Execution,ControlPrincipal,ControlAppDomain,ControlDomainPolicy,ControlEvidence,ControlThread" />
+        <IPermission class="Microsoft.SharePoint.Security.SharePointPermission, Microsoft.SharePoint.Security, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" version="1" ObjectModel="True" />
+        <IPermission class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Read="UserName" />
+        <IPermission class="System.Security.Permissions.FileIOPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1" Read="$AppDir$;" Write="$AppDir$" Append="$AppDir$" PathDiscovery="$AppDir$" />
+      </PermissionSet>
+      <Assemblies>
+        <Assembly Name="ITSK.SSS.Data" Version="1.0.0.0" PublicKeyBlob="0024000004800000940000000602000000240000525341310004000001000100AB698F5FA25DC91FA0E740A6AAC602566CE5D8829C0D5604F5D8CD2C916ABC8DD75862A390835A5E143B4693868604EC5F545E80BE78A10084AA0964C3CB5FC5291AE3CFFD3C61B5863021181394B527DB9BAEBF69F6159E2F5D59E261205BDB047F97F502FDFF8F296F4071859710389C195C3CBE36725E0CAF9924BDFAF0B2" />
+      </Assemblies>
+    </PolicyItem>
+  </CodeAccessSecurity>
+  <Assemblies>
+    <Assembly Location="ITSK.SSS.SQL.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="ITSK.SSS.Base.dll" DeploymentTarget="GlobalAssemblyCache" />
+    <Assembly Location="ITSK.SSS.Data.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+</Solution>
